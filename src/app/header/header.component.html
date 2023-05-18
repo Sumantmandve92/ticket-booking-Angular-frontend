@@ -1,0 +1,19 @@
+<!-- ========================================================================================= -->
+<!--  default navbar -->
+<div class="header" *ngIf="this.serve.isLoggedIn==0">
+  <div class="navbar"><a routerLink="">Welcome Page</a></div>
+  <div class="navbar"><a routerLink="msrtclogin">MSRTC</a></div>
+  
+</div>
+<!-- after passanger login -->
+<div class="header" *ngIf="this.serve.isLoggedIn==1">
+
+  <div class="navbar"><a routerLink="msrtcHomePage">My Registered Buses</a></div>
+  <div class="navbar"><a routerLink="addNewBus">Add New Bus</a></div>
+ 
+ <div class="navbar">{{this.serve.username}}</div>
+ 
+  <div class="navbar"><a (click)="logout()" >Logout</a></div>
+
+ 
+</div>

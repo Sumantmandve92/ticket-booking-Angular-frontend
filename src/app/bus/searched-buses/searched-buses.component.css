@@ -1,0 +1,154 @@
+.bus-container
+{
+    display: flex;
+    height: 700px;
+    width: 100%;
+
+}
+.searchedBuses
+{
+    margin: 10px;
+    display: flex;
+  
+    width: 770px;
+   
+
+}
+.select-seats
+{
+    margin: 10px;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 320px;
+   flex: 3;
+   
+}
+.busBody
+{
+    display: flex;
+   
+    align-items: center;
+flex-flow: column;
+    width: 300px;
+    height: 500px;
+    border: 1px solid red;
+    border-radius: 10px;
+
+}
+.busCabin
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.seatingArrangment
+{
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    flex-flow: row-reverse wrap;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black; 
+    border-radius: 10px;
+}
+.seat
+{
+    width:60px;
+    height: 30px;
+   display: flex;
+   justify-content: space-evenly;
+   margin: 2px;
+    background-color: aqua;
+    border-radius: 10%;
+}
+/* =============================================================================================================== */
+/* for all buses */
+
+.container
+{
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column;
+    width: 700px;
+    height: 300px;
+    margin: 10px;
+    background-color: rgb(215, 212, 212);
+    border-radius: 10px;
+    box-shadow: 3px 5px gray;
+}
+.sub-container0
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.sub-container0 button
+{
+    width: 300px;
+    height: 50px;
+    color: antiquewhite;
+    font-size: 17px;
+    background-color: rgb(255, 0, 55);
+    border-radius: 10px;
+}
+.sub-container1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    width: 150px;
+    height:180px ;
+    border-radius: 10px;
+ background-color: rgba(140, 112, 253, 0.574);
+}
+.busImage svg
+{
+color: rgb(245, 0, 0);
+}
+.sub-container2
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 350px;
+    flex-flow:column wrap;
+    height:180px ;
+    border-radius: 10px;
+ background-color: rgba(239, 241, 245, 0.858);
+}
+.sub-container2 button
+{
+    width: 300px;
+    height: 50px;
+    color: antiquewhite;
+    font-size: 17px;
+    background-color: rgb(47, 0, 255);
+    border-radius: 10px;
+  
+}
+.sub-container2 button:hover
+{
+    background-color: rgb(4, 4, 90);
+    transform: scale(1.02);
+}
+.sub-container3
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column;
+    width: 150px;
+    height:180px ;
+    border-radius: 10px;
+ background-color: rgb(230, 235, 79);
+}

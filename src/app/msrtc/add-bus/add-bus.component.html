@@ -1,0 +1,52 @@
+
+<div class="addBus-container">
+
+    <div class="sub-container">
+        <div class="busform">
+            <fieldset>
+                
+                    <div class="newbus-input">
+                        <label for="busnumber">Bus Number</label>
+                        <input type="text" [(ngModel)]="busnumber" placeholder="Enter Your Bus Number. Ex:MH23HJ0000">
+                    </div>
+                    <div class="newbus-input">
+                        <label for="">Bus Name</label>
+                        <input type="text"  [(ngModel)]="busname" placeholder="Enter Your Bus Name">
+                    </div>
+                    <div class="newbus-input">
+                        <label for="buscategory">Bus Category</label>
+                        <select  [(ngModel)]="buscategory" id="buscategory" >
+                            <option value="Sleeper">Sleeper</option>
+                            <option value="Seater">Seater</option>
+                        </select>
+                    </div>
+                    <div class="newbus-input">
+                        <label for="acnoac">Bus Category</label>
+                        <select  [(ngModel)]="acnoac" id="acnoac">
+                            <option value="AC">AC</option>
+                            <option value="NON AC">NON AC</option>
+                        </select>
+                    </div>
+                   
+                    <div class="newbus-input">
+                        <label for="seats">Number of seats</label>
+                        <input type="number"  [(ngModel)]="seats" placeholder="Enter seats in your bus">
+                    </div>
+                  <div class="newbus-input">
+                    <button (click)="addNewBus()">Add Bus</button>
+                  </div>
+               
+            </fieldset>
+            <fieldset>
+                <label for="">image upload</label>
+                <div class="img">
+                    <input type="file" (change)="onFileChanged($event)">
+                </div>
+                <div class="btn">
+                   <input type="button" (click)="onUpload()" value="upload">
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+</div>

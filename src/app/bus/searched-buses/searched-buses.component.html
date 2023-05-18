@@ -1,0 +1,125 @@
+<div class="bus-container">
+    <div class="searchedBuses">
+        <div class="allbusesTable">
+
+            <!-- <table border="1">
+                <thead>
+                    <tr>
+                        <th>Sr No</th>
+                        <th>Bus Name</th>
+                        <th>From Station</th>
+                        <th>To Station</th>
+                        <th>Date and Time</th>
+                        <th>AC/NON-AC</th>
+                        <th>Sleeper/Seater</th>
+                        <th>Select seat</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr *ngFor="let b1 of this.serve.allBusesOnThisRoute let i=index">
+                        <td>{{i+1}}</td>
+                        <td>{{b1.bus.busname}}</td>
+                        <td>{{b1.fromstation}}</td>
+                        <td>{{b1.tostation}}</td>
+                        <td>{{b1.date}}</td>
+                        <td>{{b1.bus.acnoac}}</td>
+                        <td>{{b1.bus.buscategory}}</td>
+
+
+                        <td (click)="showAvailableSeats(b1.bus.seats,b1.bus.busnumber)"><button  style="background-color:green ;">Book Seats</button></td>
+
+
+
+                    </tr>
+                </tbody>
+            </table> -->
+            <div class="main-container">
+                <div class="container" *ngFor=" let b1 of this.serve.allBusesOnThisRoute ">
+                    <div class="sub-container0">
+                        <div class="sub-container0">
+                            <button>{{b1.fromstation}} @ {{b1.takeoffat}}</button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" fill="currentColor"
+                                class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z" />
+                            </svg>
+                            <button>{{b1.tostation}} @ {{b1.landon}}</button>
+                        </div>
+                    </div>
+                    <div class="sub-container0">
+                        <div class="sub-container1">
+                            <div class="busname">{{b1.bus.busname}}</div>
+                            <div class="busImage">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="100" fill="currentColor"
+                                    class="bi bi-truck-front-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.5 0A2.5 2.5 0 0 0 1 2.5v9c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2v-9A2.5 2.5 0 0 0 12.5 0h-9ZM3 3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3.9c0 .625-.562 1.092-1.17.994C10.925 7.747 9.208 7.5 8 7.5c-1.208 0-2.925.247-3.83.394A1.008 1.008 0 0 1 3 6.9V3Zm1 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm8 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm-5-2h2a1 1 0 1 1 0 2H7a1 1 0 1 1 0-2Z" />
+                                </svg>
+                            </div>
+                            <div class="busnumber">Company Name</div>
+                        </div>
+                        <div class="sub-container2">
+
+<div class="price" style="color: brown; font-size:24px">Price : {{b1.ticketprice}}.00Rs.</div>
+                            <div class="date">
+                                {{b1.date|date}}
+                            </div>
+                            <div class="bookSeat">
+                                <button (click)="showAvailableSeats(b1.passangers,b1)">Book Ticket</button>
+                            </div>
+                            <div class="rating">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-star-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="sub-container3">
+                            <div class="acornonac">{{b1.bus.acnoac}}</div>
+                            <div class="acornonac">{{b1.bus.buscategory}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="select-seats">
+
+        <div class="busBody">
+            <div class="busCabin">
+
+            </div>
+            <div class="seatingArrangment">
+                <div  class="seat" *ngFor="let s1 of busSeats let j=index">
+                    <div class="seat" *ngIf="s1==null" (click)="bookYourSeat(j,busRoute)">{{j+1}}</div>
+                    <div class="seat" *ngIf="s1!=null" style="background-color: red;">{{j+1}}</div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

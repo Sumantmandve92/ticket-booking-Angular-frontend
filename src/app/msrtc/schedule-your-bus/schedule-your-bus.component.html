@@ -1,0 +1,69 @@
+<div class="main-container">
+    <div class="scheduling-section">
+        <div class="container">
+            <div class="sub-container1">
+                <div class="busname">{{this.serve.scheduleThisBus.busname}}</div>
+                <div class="busImage">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="100" fill="currentColor"
+                        class="bi bi-truck-front-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M3.5 0A2.5 2.5 0 0 0 1 2.5v9c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2v-9A2.5 2.5 0 0 0 12.5 0h-9ZM3 3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3.9c0 .625-.562 1.092-1.17.994C10.925 7.747 9.208 7.5 8 7.5c-1.208 0-2.925.247-3.83.394A1.008 1.008 0 0 1 3 6.9V3Zm1 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm8 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm-5-2h2a1 1 0 1 1 0 2H7a1 1 0 1 1 0-2Z" />
+                    </svg>
+                </div>
+                <div class="busnumber">{{this.serve.scheduleThisBus.busnumber}}</div>
+            </div>
+            <div class="sub-container2">
+                <div class="">Registered Date : {{this.serve.scheduleThisBus.registereddate}}</div>
+                <div class="">Total Passanger Travelled : {{this.serve.scheduleThisBus.totalpassangertravelled}}</div>
+                <div class=""> Seats : {{this.serve.scheduleThisBus.seats}}</div>
+                <div class="btn" (click)="showSchedule(this.serve.scheduleThisBus.busnumber)"> Show Schedule</div>
+            </div>
+            <div class="sub-container3">
+                <div class="acornonac">{{this.serve.scheduleThisBus.acnoac}}</div>
+                <div class="acornonac">{{this.serve.scheduleThisBus.buscategory}}</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <fieldset>
+                <div class="fromstation">
+                    <input type="text" [(ngModel)]="fromstation" placeholder="Enter from station">
+                    <input type="datetime-local" [(ngModel)]="takeoffat" placeholder="Enter from station time">
+                </div>
+                <!-- <div class="boardingstation">
+                    <input type="text"  [(ngModel)]="boardingstation" placeholder="Enter boardingstation ex.time/location/time/location">
+                    <input type="text"  [(ngModel)]="droppingstation" placeholder="Enter droppingstation ex.time/location/time/location">
+         
+                </div> -->
+                <div class="tostation">
+                    <input type="text" [(ngModel)]="tostation" placeholder="Enter to station">
+                    <input type="datetime-local" [(ngModel)]="landon" placeholder="Enter to station time">
+                </div>
+                <div>
+                    <input type="date" [(ngModel)]="date">
+<input type="number" [(ngModel)]="ticketprice" placeholder="Enter ticket price for this route">
+                </div>
+
+                <div class="btn" (click)="scheduleThisBus()"> Submit</div>
+
+            </fieldset>
+        </div>
+        <div class="container">
+            reviews
+        </div>
+
+    </div>
+    <div class="bus-timeTable" *ngIf="timeTableOfThisBus!=null">
+<div class="time-table" *ngFor="let t1 of timeTableOfThisBus">
+    <div class="table-content">
+        <div style="color: red;font-size:20px"> From :{{t1.fromstation|uppercase}}</div>
+        <div>{{t1.takeoffat}}</div>
+    </div>
+    <div class="table-content">
+        <div style="color: red;font-size:20px">To :{{t1.tostation|uppercase}}</div>
+        <div>{{t1.landon}}</div>
+    </div>
+
+</div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="search-container">
+    <div class="search">
+        <fieldset class="searchYourBus">
+
+            <form  #searchBusForm="ngForm">
+    
+                <div class="search-input fromstation">
+                    <input type="text" name="fromstation" #fromstation placeholder="Enter from station">
+                </div>
+                <div class="search-input tostation">
+                    <input type="text" name="tostation" #tostation placeholder="Enter to station">
+                </div>
+                <div class="search-input date">
+                    <input type="date" name="today" #date >
+                </div>
+                <div class="search-input"><button (click)="searchbus(fromstation.value,tostation.value,date.value)">Search  Bus</button></div>
+            </form>
+        </fieldset>
+    </div>
+</div>

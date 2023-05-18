@@ -1,0 +1,50 @@
+.search
+{
+    display: flex;
+    justify-content: center;
+   
+
+    margin: 25px;
+    height: 100px;
+   
+    
+}
+.searchYourBus
+{
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+border-radius:12px;
+    align-items: center;
+    height: 300px;
+    margin: 25px;
+    width: 220px;
+    background-color: rgb(89, 245, 91);
+   
+   
+}
+.search-input
+{
+    margin: 25px 5px;
+}
+.search-input input
+{
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+
+}
+.search-input button
+{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(226, 22, 22);
+    color: white;
+    font-size: 20px;
+}
+.search-input button:hover
+{
+    background-color: rgb(83, 29, 29);
+    transform: scale(1.05);
+}
